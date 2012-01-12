@@ -24,8 +24,27 @@ our $VERSION = '1.0.0';
 =head1 SYNOPSIS
 
 	use Test::Dist::VersionSync;
-	ok_versions();
+	Test::Dist::VersionSync::ok_versions();
 
+
+=head1 USE AS A TEST FILE
+
+The most common use should be to add a module_versions.t file to your tests directory for a given distribution, with the following content:
+
+	#!perl -T
+	
+	use strict;
+	use warnings;
+	
+	use Test::More;
+	
+	# Ensure a recent version of Test::Dist::VersionSync
+	my $version_min = '1.0.0';
+	eval "use Test::Dist::VersionSync $version_min";
+	plan( skip_all => "Test::Dist::VersionSync $version_min required for testing module versions in the distribution." )
+		if $@;
+
+	Test::Dist::VersionSync::ok_versions();
 
 =head1 FUNCTIONS
 
@@ -37,7 +56,7 @@ number.
 	# Default, use MANIFEST and MANIFEST.SKIP to find out what modules exist.
 	ok_versions();
 	
-	# Optional, specify a list of files to check for identical versions.
+	# Optional, specify a list of modules to check for identical versions.
 	ok_versions(
 		modules =>
 		[

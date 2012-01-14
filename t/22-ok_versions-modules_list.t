@@ -23,16 +23,17 @@ ok(
 	'Add the test lib/ directory to @INC.',
 );
 
-test_out(
-	'ok 1 - modules list isa ARRAY',
-	'    1..4',
-	'    ok 1 - use TestModule1;',
-	'    ok 2 - Module TestModule1 declares a version.',
-	'    ok 3 - use TestModule2;',
-	'    ok 4 - Module TestModule2 declares a version.',
-	'ok 2 - Retrieve versions for all modules listed.',
-	'ok 3 - The modules declare only one version.',
-);
+test_out( 'ok 1 - modules list isa ARRAY' );
+test_out( '    TAP version 13' )
+	if $Test::More::VERSION >= 1.005;
+test_out( '    1..4' );
+test_out( '    ok 1 - use TestModule1;' );
+test_out( '    ok 2 - Module TestModule1 declares a version.' );
+test_out( '    ok 3 - use TestModule2;' );
+test_out( '    ok 4 - Module TestModule2 declares a version.' );
+test_out( 'ok 2 - Retrieve versions for all modules listed.' );
+test_out( 'ok 3 - The modules declare only one version.' );
+
 Test::Dist::VersionSync::ok_versions(
 	modules =>
 	[
@@ -40,6 +41,7 @@ Test::Dist::VersionSync::ok_versions(
 		'TestModule2',
 	],
 );
+
 test_test( "ok_versions() detects matching versions." );
 
 ok(

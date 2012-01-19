@@ -2,3 +2,6 @@
 [InputOutput::RequireBriefOpen]
 lines = 15
 
+# Don't require /x on small regexes.
+[RegularExpressions::RequireExtendedFormatting]
+minimum_regex_length_to_complain_about = 20

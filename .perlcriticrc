@@ -1,0 +1,4 @@
+# Allow open()-close() to span up to 15 lines.
+[InputOutput::RequireBriefOpen]
+lines = 15
+

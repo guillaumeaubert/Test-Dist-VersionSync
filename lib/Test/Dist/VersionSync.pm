@@ -106,7 +106,7 @@ sub ok_versions
 		Test::More::skip(
 			'No module found in the distribution.',
 			2,
-		) unless scalar( @$modules ) != 0;
+		) if scalar( @$modules ) == 0;
 		
 		my $versions = {};
 		$return &&= Test::More::subtest(

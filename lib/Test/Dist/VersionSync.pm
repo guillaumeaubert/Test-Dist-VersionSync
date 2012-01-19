@@ -14,11 +14,11 @@ Test::Dist::VersionSync - Verify that all the modules in a distribution have the
 
 =head1 VERSION
 
-Version 1.0.0
+Version 1.0.1
 
 =cut
 
-our $VERSION = '1.0.0';
+our $VERSION = '1.0.1';
 
 
 =head1 SYNOPSIS
@@ -39,7 +39,7 @@ The most common use should be to add a module_versions.t file to your tests dire
 	use Test::More;
 	
 	# Ensure a recent version of Test::Dist::VersionSync
-	my $version_min = '1.0.0';
+	my $version_min = '1.0.1';
 	eval "use Test::Dist::VersionSync $version_min";
 	plan( skip_all => "Test::Dist::VersionSync $version_min required for testing module versions in the distribution." )
 		if $@;

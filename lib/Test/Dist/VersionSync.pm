@@ -198,12 +198,12 @@ sub _get_modules_from_manifest
 	if ( -e 'MANIFEST.SKIP' )
 	{
 		Test::More::ok(
-			open( MANIFESTSKIP, '<', 'MANIFEST.SKIP' ),
+			open( my $MANIFESTSKIP, '<', 'MANIFEST.SKIP' ),
 			'Retrieve MANIFEST.SKIP file.',
 		) || diag( "Failed to open < MANIFEST.SKIP file: $!." );
 		
 		my $exclusions = [];
-		foreach my $pattern ( <MANIFESTSKIP> )
+		foreach my $pattern ( <$MANIFESTSKIP> )
 		{
 			chomp( $pattern );
 			push( @$exclusions, $pattern );
@@ -227,12 +227,12 @@ sub _get_modules_from_manifest
 	);
 	
 	Test::More::ok(
-		open( MANIFEST, '<', 'MANIFEST' ),
+		open( my $MANIFEST, '<', 'MANIFEST' ),
 		'Retrieve MANIFEST file.',
 	) || diag( "Failed to open < MANIFEST file: $!." );
 	
 	my $modules = [];
-	foreach my $file ( <MANIFEST> )
+	foreach my $file ( <$MANIFEST> )
 	{
 		chomp( $file );
 		next if defined( $excluded_patterns ) && $file =~ /$excluded_patterns/;

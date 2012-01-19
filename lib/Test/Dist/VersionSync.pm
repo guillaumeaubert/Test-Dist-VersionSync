@@ -72,6 +72,7 @@ sub ok_versions
 {
 	my ( %args ) = @_;
 	my $modules = delete( $args{'modules'} );
+	my $return = 1;
 	
 	# Find out via Test::Builder if a plan has been declared, otherwise we'll
 	# declare our own.
@@ -85,7 +86,7 @@ sub ok_versions
 		Test::More::plan( tests => 3 )
 			unless $plan_declared;
 		
-		Test::More::isa_ok(
+		$return &&= Test::More::isa_ok(
 			$modules,
 			'ARRAY',
 			'modules list',
@@ -108,7 +109,7 @@ sub ok_versions
 		) unless scalar( @$modules ) != 0;
 		
 		my $versions = {};
-		Test::More::subtest(
+		$return &&= Test::More::subtest(
 			'Retrieve versions for all modules listed.',
 			sub
 			{
@@ -133,12 +134,14 @@ sub ok_versions
 			}
 		);
 		
-		is(
+		$return &&= is(
 			scalar( keys %$versions ),
 			1,
 			'The modules declare only one version.',
 		) || diag( 'Versions and the modules they were found in: ' . Dumper( $versions ) );
 	}
+
+	return $return;
 }
 
 

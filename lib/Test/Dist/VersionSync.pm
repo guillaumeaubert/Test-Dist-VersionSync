@@ -208,6 +208,7 @@ sub _get_modules_from_manifest
 			chomp( $pattern );
 			push( @$exclusions, $pattern );
 		}
+		close( $MANIFESTSKIP );
 		
 		$excluded_patterns = '(' . join( '|', @$exclusions ) . ')'
 			if scalar( @$exclusions ) != 0;
@@ -242,6 +243,7 @@ sub _get_modules_from_manifest
 		$module =~ s/[\\\/]/::/g;
 		push( @$modules, $module );
 	}
+	close( $MANIFEST );
 	
 	return $modules;
 }

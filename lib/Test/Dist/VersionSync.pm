@@ -203,7 +203,7 @@ sub _get_modules_from_manifest
 		) || diag( "Failed to open < MANIFEST.SKIP file: $!." );
 		
 		my $exclusions = [];
-		foreach my $pattern ( <$MANIFESTSKIP> )
+		while ( my $pattern = <$MANIFESTSKIP> )
 		{
 			chomp( $pattern );
 			push( @$exclusions, $pattern );
@@ -233,7 +233,7 @@ sub _get_modules_from_manifest
 	) || diag( "Failed to open < MANIFEST file: $!." );
 	
 	my $modules = [];
-	foreach my $file ( <$MANIFEST> )
+	while ( my $file = <$MANIFEST> )
 	{
 		chomp( $file );
 		next if defined( $excluded_patterns ) && $file =~ /$excluded_patterns/;

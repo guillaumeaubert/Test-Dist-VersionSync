@@ -170,7 +170,10 @@ sub import
 	
 	Test::More::plan( %test_plan )
 		if scalar( keys %test_plan ) != 0;
+	
+	return 1;
 }
+
 
 =begin _private
 

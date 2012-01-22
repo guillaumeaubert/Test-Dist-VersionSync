@@ -86,11 +86,11 @@ sub ok_versions
 		Test::More::plan( tests => 3 )
 			unless $plan_declared;
 		
-		$return &&= Test::More::isa_ok(
+		$return = Test::More::isa_ok(
 			$modules,
 			'ARRAY',
 			'modules list',
-		);
+		) && $return;
 	}
 	else
 	{
@@ -109,7 +109,7 @@ sub ok_versions
 		) if scalar( @$modules ) == 0;
 		
 		my $versions = {};
-		$return &&= Test::More::subtest(
+		$return = Test::More::subtest(
 			'Retrieve versions for all modules listed.',
 			sub
 			{
@@ -132,13 +132,17 @@ sub ok_versions
 					push( @{ $versions->{ $version } }, $module );
 				}
 			}
-		);
+		) && $return;
 		
-		$return &&= is(
+		my $has_only_one_version = is(
 			scalar( keys %$versions ),
 			1,
 			'The modules declare only one version.',
-		) || diag( 'Versions and the modules they were found in: ' . Dumper( $versions ) );
+		);
+		diag( 'Versions and the modules they were found in: ' . Dumper( $versions ) )
+			unless $has_only_one_version;
+		$return = $has_only_one_version && $has_only_one_version;
+		
 	}
 
 	return $return;

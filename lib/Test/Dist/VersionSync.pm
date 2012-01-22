@@ -197,21 +197,24 @@ sub _get_modules_from_manifest
 	my $excluded_patterns;
 	if ( -e 'MANIFEST.SKIP' )
 	{
-		Test::More::ok(
+		my $opened_manifest_skip = Test::More::ok(
 			open( my $MANIFESTSKIP, '<', 'MANIFEST.SKIP' ),
 			'Retrieve MANIFEST.SKIP file.',
 		) || diag( "Failed to open < MANIFEST.SKIP file: $!." );
 		
-		my $exclusions = [];
-		while ( my $pattern = <$MANIFESTSKIP> )
+		if ( $opened_manifest_skip )
 		{
-			chomp( $pattern );
-			push( @$exclusions, $pattern );
+			my $exclusions = [];
+			while ( my $pattern = <$MANIFESTSKIP> )
+			{
+				chomp( $pattern );
+				push( @$exclusions, $pattern );
+			}
+			close( $MANIFESTSKIP );
+			
+			$excluded_patterns = '(' . join( '|', @$exclusions ) . ')'
+				if scalar( @$exclusions ) != 0;
 		}
-		close( $MANIFESTSKIP );
-		
-		$excluded_patterns = '(' . join( '|', @$exclusions ) . ')'
-			if scalar( @$exclusions ) != 0;
 	}
 	else
 	{
@@ -221,29 +224,42 @@ sub _get_modules_from_manifest
 		);
 	}
 	
-	# Retrieve the list of modules in MANIFEST.
-	Test::More::ok(
+	# Make sure that there is a MANIFEST file at the root of the distribution,
+	# before we even open it.
+	my $manifest_exists = Test::More::ok(
 		-e 'MANIFEST',
 		'The MANIFEST file is present at the root of the distribution.',
 	);
 	
-	Test::More::ok(
-		open( my $MANIFEST, '<', 'MANIFEST' ),
-		'Retrieve MANIFEST file.',
-	) || diag( "Failed to open < MANIFEST file: $!." );
-	
+	# Retrieve the list of modules in MANIFEST.
 	my $modules = [];
-	while ( my $file = <$MANIFEST> )
+	SKIP:
 	{
-		chomp( $file );
-		next if defined( $excluded_patterns ) && $file =~ /$excluded_patterns/;
-		next unless $file =~ m/^lib[\\\/](.*)\.pm$/;
+		Test::More::skip(
+			'MANIFEST is missing, cannot retrieve list of files.',
+			1,
+		) unless $manifest_exists;
+	
+		my $opened_manifest = Test::More::ok(
+			open( my $MANIFEST, '<', 'MANIFEST' ),
+			'Retrieve MANIFEST file.',
+		) || diag( "Failed to open < MANIFEST file: $!." );
 		
-		my $module = $1;
-		$module =~ s/[\\\/]/::/g;
-		push( @$modules, $module );
+		if ( $opened_manifest )
+		{
+			while ( my $file = <$MANIFEST> )
+			{
+				chomp( $file );
+				next if defined( $excluded_patterns ) && $file =~ /$excluded_patterns/;
+				next unless $file =~ m/^lib[\\\/](.*)\.pm$/;
+				
+				my $module = $1;
+				$module =~ s/[\\\/]/::/g;
+				push( @$modules, $module );
+			}
+			close( $MANIFEST );
+		}
 	}
-	close( $MANIFEST );
 	
 	return $modules;
 }

@@ -1,9 +1,9 @@
 # Change default severity to harsh.
 severity = harsh
 
-# Allow open()-close() to span up to 15 lines.
+# Allow open()-close() to span up to 20 lines.
 [InputOutput::RequireBriefOpen]
-lines = 15
+lines = 20
 
 # Don't require /x on small regexes.
 [RegularExpressions::RequireExtendedFormatting]

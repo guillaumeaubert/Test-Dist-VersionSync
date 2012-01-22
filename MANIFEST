@@ -28,6 +28,10 @@ t/22-ok_versions-modules_list/lib/TestModule2.pm
 t/23-ok_versions-empty_list.t
 t/24-ok_versions-missing_manifest/empty
 t/24-ok_versions-missing_manifest.t
+t/25-ok_versions-missing_version.t
+t/25-ok_versions-missing_version/lib/TestModule1.pm
+t/25-ok_versions-missing_version/lib/TestModule2.pm
+t/25-ok_versions-missing_version/MANIFEST
 t/manifest.t
 t/perlcritic.t
 t/pod.t

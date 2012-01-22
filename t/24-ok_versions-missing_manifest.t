@@ -32,7 +32,7 @@ test_out( 'ok 5 # skip No module found in the distribution.' );
 Test::Dist::VersionSync::ok_versions();
 
 test_test(
-	name     => "ok_versions() detects non-matching versions.",
+	name     => "ok_versions() fails nicely when MANIFEST is missing.",
 	skip_err => 1,
 );
 

@@ -24,6 +24,19 @@ my $builder = Module::Build->new(
 		'Test-Dist-VersionSync-*',
 	],
 	create_makefile_pl  => 'traditional',
+	configure_requires  =>
+	{
+		'Module::Build'         => 0,
+	},
+	meta_merge          =>
+	{
+		resources               =>
+		{
+			repository  => 'https://sourceforge.net/p/perldistversion/code',
+			homepage    => 'https://metacpan.org/release/Test-Dist-VersionSync',
+			bugtracker  => 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=test-dist-versionsync',
+		},
+	},
 );
 
 $builder->create_build_script();

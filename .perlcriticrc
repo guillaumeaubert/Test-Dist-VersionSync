@@ -1,6 +1,11 @@
 # Change default severity to harsh.
 severity = harsh
 
+# Use only core PerlCritic policies.
+# This prevents tests from failing if the tester / installer has non-standard
+# additional PerlCritic policies.
+theme = core
+
 # Allow open()-close() to span up to 20 lines.
 [InputOutput::RequireBriefOpen]
 lines = 20

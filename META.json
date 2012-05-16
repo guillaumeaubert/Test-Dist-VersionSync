@@ -36,7 +36,7 @@
    "provides" : {
       "Test::Dist::VersionSync" : {
          "file" : "lib/Test/Dist/VersionSync.pm",
-         "version" : "v1.0.2"
+         "version" : "v1.0.3"
       }
    },
    "release_status" : "stable",
@@ -52,5 +52,5 @@
          "url" : "https://sourceforge.net/p/perldistversion/code"
       }
    },
-   "version" : "v1.0.2"
+   "version" : "v1.0.3"
 }

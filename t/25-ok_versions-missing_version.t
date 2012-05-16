@@ -23,11 +23,13 @@ ok(
 	'Add the test lib/ directory to @INC.',
 );
 
+test_out( '1..5')
+	if $Test::More::VERSION >= 1.005000005;
 test_out( 'ok 1 - No MANIFEST.SKIP found, skipping.' );
 test_out( 'ok 2 - The MANIFEST file is present at the root of the distribution.' );
 test_out( 'ok 3 - Retrieve MANIFEST file.' );
 test_out( '    TAP version 13' )
-	if $Test::More::VERSION >= 1.005;
+	if $Test::More::VERSION >= 1.005 && $Test::More::VERSION < 1.005000005;
 test_out( '    1..4' );
 test_out( '    ok 1 - use TestModule1;' );
 test_out( '    ok 2 - Module TestModule1 declares a version.' );

@@ -23,6 +23,8 @@ ok(
 	'Add the test lib/ directory to @INC.',
 );
 
+test_out( '1..5')
+	if $Test::More::VERSION >= 1.005000005;
 test_out( 'ok 1 - No MANIFEST.SKIP found, skipping.' );
 test_out( 'not ok 2 - The MANIFEST file is present at the root of the distribution.' );
 test_out( 'ok 3 # skip MANIFEST is missing, cannot retrieve list of files.' );

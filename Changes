@@ -1,17 +1,17 @@
 Revision history for Test-Dist-VersionSync
 
 v1.0.3  05/15/2012
-        Tweaked tests for Test::Builder v1.005000_005.
-        Restricted PerlCritic tests to core policies.
-        Added meta information.
+        * Tweaked tests for Test::Builder v1.005000_005.
+        * Restricted PerlCritic tests to core policies.
+        * Added meta information.
 
 v1.0.2  01/21/2012
-        Fixed issue with how the return value of ok_versions() was calculated.
-        Added tests.
+        * Fixed issue with how the return value of ok_versions() was calculated.
+        * Added tests.
 
 v1.0.1  01/18/2012
-        Tweaked tests for the upcoming Test Builder 1.5.
-        Cleanup to pass PerlCritic 'harsh'.
+        * Tweaked tests for the upcoming Test Builder 1.5.
+        * Cleanup to pass PerlCritic 'harsh'.
 
 v1.0.0  01/11/2012
-        Public release.
+        * Public release.

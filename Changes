@@ -1,5 +1,9 @@
 Revision history for Test-Dist-VersionSync
 
+v1.0.4  09/22/2012
+        * Moved repository to GitHub.
+        * Updated build_requires vs requires.
+
 v1.0.3  05/15/2012
         * Tweaked tests for Test::Builder v1.005000_005.
         * Restricted PerlCritic tests to core policies.

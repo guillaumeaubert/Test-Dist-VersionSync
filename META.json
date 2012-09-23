@@ -36,7 +36,7 @@
    "provides" : {
       "Test::Dist::VersionSync" : {
          "file" : "lib/Test/Dist/VersionSync.pm",
-         "version" : "v1.0.3"
+         "version" : "v1.0.4"
       }
    },
    "release_status" : "stable",
@@ -52,5 +52,5 @@
          "url" : "https://github.com/guillaumeaubert/Test-Dist-VersionSync"
       }
    },
-   "version" : "v1.0.3"
+   "version" : "v1.0.4"
 }

@@ -49,7 +49,7 @@
          "http://www.perlfoundation.org/artistic_license_1_0"
       ],
       "repository" : {
-         "url" : "https://sourceforge.net/p/perldistversion/code"
+         "url" : "https://github.com/guillaumeaubert/Test-Dist-VersionSync"
       }
    },
    "version" : "v1.0.3"

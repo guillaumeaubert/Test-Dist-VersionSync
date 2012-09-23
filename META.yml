@@ -26,5 +26,5 @@ resources:
   bugtracker: http://rt.cpan.org/NoAuth/ReportBug.html?Queue=test-dist-versionsync
   homepage: https://metacpan.org/release/Test-Dist-VersionSync
   license: http://www.perlfoundation.org/artistic_license_1_0
-  repository: https://sourceforge.net/p/perldistversion/code
+  repository: https://github.com/guillaumeaubert/Test-Dist-VersionSync
 version: v1.0.3

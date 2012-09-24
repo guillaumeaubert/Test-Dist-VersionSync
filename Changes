@@ -1,5 +1,8 @@
 Revision history for Test-Dist-VersionSync
 
+v1.1.0  09/24/2012
+        * Relicensed as GPLv3 for inclusion in Fedora.
+
 v1.0.4  09/22/2012
         * Moved repository to GitHub.
         * Updated build_requires vs requires.

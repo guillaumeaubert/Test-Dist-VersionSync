@@ -17,7 +17,7 @@ name: Test-Dist-VersionSync
 provides:
   Test::Dist::VersionSync:
     file: lib/Test/Dist/VersionSync.pm
-    version: v1.0.4
+    version: v1.1.0
 requires:
   Data::Dumper: 0
   Test::More: 0.94
@@ -27,4 +27,4 @@ resources:
   homepage: https://metacpan.org/release/Test-Dist-VersionSync
   license: http://www.gnu.org/licenses/gpl-3.0.txt
   repository: https://github.com/guillaumeaubert/Test-Dist-VersionSync
-version: v1.0.4
+version: v1.1.0

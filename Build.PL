@@ -36,6 +36,14 @@ my $builder = Module::Build->new(
 			homepage    => 'https://metacpan.org/release/Test-Dist-VersionSync',
 			bugtracker  => 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=test-dist-versionsync',
 		},
+		no_index               =>
+		{
+			namespace      =>
+			[
+				'TestModule1',
+				'TestModule2',
+			],
+		},
 	},
 );
 

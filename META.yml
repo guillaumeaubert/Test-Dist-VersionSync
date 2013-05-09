@@ -14,6 +14,10 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Test-Dist-VersionSync
+no_index:
+  namespace:
+    - TestModule1
+    - TestModule2
 provides:
   Test::Dist::VersionSync:
     file: lib/Test/Dist/VersionSync.pm

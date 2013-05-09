@@ -13,6 +13,12 @@
       "version" : "2"
    },
    "name" : "Test-Dist-VersionSync",
+   "no_index" : {
+      "namespace" : [
+         "TestModule1",
+         "TestModule2"
+      ]
+   },
    "prereqs" : {
       "build" : {
          "requires" : {

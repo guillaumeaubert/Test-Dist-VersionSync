@@ -293,27 +293,19 @@ You can also look for information at:
 
 =over
 
-=item *
-
-GitHub's request tracker
+=item * GitHub's request tracker
 
 L<https://github.com/guillaumeaubert/Test-Dist-VersionSync/issues>
 
-=item *
-
-AnnoCPAN: Annotated CPAN documentation
+=item * AnnoCPAN: Annotated CPAN documentation
 
 L<http://annocpan.org/dist/test-dist-versionsync>
 
-=item *
-
-CPAN Ratings
+=item * CPAN Ratings
 
 L<http://cpanratings.perl.org/d/test-dist-versionsync>
 
-=item *
-
-Search CPAN
+=item * Search CPAN
 
 L<http://search.cpan.org/dist/test-dist-versionsync/>
 

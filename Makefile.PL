@@ -9,6 +9,7 @@ WriteMakefile
                    'Carp' => 0,
                    'Data::Dumper' => 0,
                    'Test::Builder::Tester' => 0,
+                   'Test::FailWarnings' => 0,
                    'Test::More' => '0.94'
                  },
   'INSTALLDIRS' => 'site',

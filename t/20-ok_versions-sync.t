@@ -3,9 +3,10 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
-use Test::Dist::VersionSync;
 use Test::Builder::Tester;
+use Test::Dist::VersionSync;
+use Test::FailWarnings -allow_deps => 1;
+use Test::More tests => 5;
 
 
 use_ok( 'Cwd' );

@@ -43,6 +43,7 @@ my $builder = $class->new(
 	{
 		'Carp'                  => 0,
 		'Test::Builder::Tester' => 0,
+		'Test::FailWarnings'    => 0,
 	},
 	requires            =>
 	{

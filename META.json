@@ -23,7 +23,8 @@
       "build" : {
          "requires" : {
             "Carp" : "0",
-            "Test::Builder::Tester" : "0"
+            "Test::Builder::Tester" : "0",
+            "Test::FailWarnings" : "0"
          }
       },
       "configure" : {

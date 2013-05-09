@@ -37,8 +37,8 @@ You can also look for information at:
  * [CPAN Ratings]
    (http://cpanratings.perl.org/d/Test-Dist-VersionSync)
 
- * [Search CPAN]
-   (http://search.cpan.org/dist/Test-Dist-VersionSync/)
+ * [MetaCPAN]
+   (https://metacpan.org/release/Test-Dist-VersionSync)
 
 
 LICENSE AND COPYRIGHT

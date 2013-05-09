@@ -305,9 +305,9 @@ L<http://annocpan.org/dist/test-dist-versionsync>
 
 L<http://cpanratings.perl.org/d/test-dist-versionsync>
 
-=item * Search CPAN
+=item * MetaCPAN
 
-L<http://search.cpan.org/dist/test-dist-versionsync/>
+L<https://metacpan.org/release/Test-Dist-VersionSync>
 
 =back
 

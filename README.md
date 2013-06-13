@@ -2,6 +2,7 @@ Test-Dist-VersionSync
 =====================
 
 [![Build Status](https://travis-ci.org/guillaumeaubert/Test-Dist-VersionSync.png?branch=master)](https://travis-ci.org/guillaumeaubert/Test-Dist-VersionSync)
+[![Coverage Status](https://coveralls.io/repos/guillaumeaubert/Test-Dist-VersionSync/badge.png?branch=master)](https://coveralls.io/r/guillaumeaubert/Test-Dist-VersionSync?branch=master)
 
 Test::Dist::VersionSync verifies that all the modules in a distribution have the same version number.
 

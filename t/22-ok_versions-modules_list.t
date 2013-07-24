@@ -26,7 +26,9 @@ ok(
 
 test_out( '1..3')
 	if $Test::More::VERSION >= 1.005000005;
-test_out( 'ok 1 - modules list isa ARRAY' );
+$Test::More::VERSION >= 0.9804 && $Test::More::VERSION < 1.005
+	? test_out( "ok 1 - 'modules list' isa 'ARRAY'" )
+	: test_out( "ok 1 - modules list isa ARRAY" );
 test_out( '    TAP version 13' )
 	if $Test::More::VERSION >= 1.005 && $Test::More::VERSION < 1.005000005;
 test_out( '    # Subtest: Retrieve versions for all modules listed.' )

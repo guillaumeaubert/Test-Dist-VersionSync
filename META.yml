@@ -3,17 +3,17 @@ abstract: 'Verify that all the modules in a distribution have the same version n
 author:
   - 'Guillaume Aubert <aubertg@cpan.org>'
 build_requires:
-  Carp: 0
-  Test::Builder::Tester: 0
-  Test::FailWarnings: 0
+  Carp: '0'
+  Test::Builder::Tester: '0'
+  Test::FailWarnings: '0'
 configure_requires:
-  Module::Build: 0
+  Module::Build: '0'
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560'
-license: open_source
+generated_by: 'Module::Build version 0.4205, CPAN::Meta::Converter version 2.140640'
+license: gpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Test-Dist-VersionSync
 no_index:
   namespace:
@@ -24,9 +24,9 @@ provides:
     file: lib/Test/Dist/VersionSync.pm
     version: v1.1.2
 requires:
-  Data::Dumper: 0
-  Test::More: 0.94
-  perl: 5.006
+  Data::Dumper: '0'
+  Test::More: '0.94'
+  perl: '5.006'
 resources:
   bugtracker: https://github.com/guillaumeaubert/Test-Dist-VersionSync/issues
   homepage: https://metacpan.org/release/Test-Dist-VersionSync

@@ -14,11 +14,11 @@ Test::Dist::VersionSync - Verify that all the modules in a distribution have the
 
 =head1 VERSION
 
-Version 1.1.3
+Version 1.1.4
 
 =cut
 
-our $VERSION = '1.1.3';
+our $VERSION = '1.1.4';
 
 
 =head1 SYNOPSIS

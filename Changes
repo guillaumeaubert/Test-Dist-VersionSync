@@ -1,5 +1,8 @@
 Revision history for Test-Dist-VersionSync
 
+v1.1.4  2014-11-15
+        - Handle format changes for the latest Test::Builder alphas (GH-3).
+
 v1.1.3  2014-04-20
         - Fixed "package version matches dist version" for CPANTS.
         - Fixed license declared in meta files.

@@ -4,6 +4,7 @@ Test-Dist-VersionSync
 [![Build Status](https://travis-ci.org/guillaumeaubert/Test-Dist-VersionSync.svg?branch=master)](https://travis-ci.org/guillaumeaubert/Test-Dist-VersionSync)
 [![Coverage Status](https://coveralls.io/repos/guillaumeaubert/Test-Dist-VersionSync/badge.svg?branch=master)](https://coveralls.io/r/guillaumeaubert/Test-Dist-VersionSync?branch=master)
 [![CPAN](https://img.shields.io/cpan/v/Test-Dist-VersionSync.svg)](https://metacpan.org/release/Test-Dist-VersionSync)
+[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0)
 
 Test::Dist::VersionSync verifies that all the modules in a distribution have the same version number.
 

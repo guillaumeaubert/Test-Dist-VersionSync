@@ -3,17 +3,17 @@ require 5.006;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-  'NAME' => 'Test::Dist::VersionSync',
   'VERSION_FROM' => 'lib/Test/Dist/VersionSync.pm',
   'PREREQ_PM' => {
-                   'Carp' => 0,
-                   'Data::Dumper' => 0,
                    'Test::Builder::Tester' => 0,
+                   'Data::Dumper' => 0,
+                   'Carp' => 0,
                    'Test::FailWarnings' => 0,
                    'Test::More' => '0.94'
                  },
+  'NAME' => 'Test::Dist::VersionSync',
   'INSTALLDIRS' => 'site',
-  'EXE_FILES' => [],
-  'PL_FILES' => {}
+  'PL_FILES' => {},
+  'EXE_FILES' => []
 )
 ;

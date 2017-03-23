@@ -22,7 +22,7 @@ no_index:
 provides:
   Test::Dist::VersionSync:
     file: lib/Test/Dist/VersionSync.pm
-    version: v1.1.4
+    version: v1.2.0
 requires:
   Data::Dumper: '0'
   Test::More: '0.94'
@@ -32,4 +32,4 @@ resources:
   homepage: https://metacpan.org/release/Test-Dist-VersionSync
   license: http://dev.perl.org/licenses/
   repository: https://github.com/guillaumeaubert/Test-Dist-VersionSync
-version: v1.1.4
+version: v1.2.0
